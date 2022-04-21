@@ -49,7 +49,7 @@ def aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnc
 
     TextOCR = pytesseract.image_to_string(mask, lang="por")
     TextOCR.strip()
-    with open("Resultados/Output.txt", "w",encoding='utf-8') as txt_file:
+    with open("Python-TCC-Form-Tesseract/Resultados/Output.txt", "w",encoding='utf-8') as txt_file:
         txt_file.write(TextOCR)
     with open(enderecoResultado, "r",encoding='utf-8') as leitor:
         TextReferencia = leitor.read()

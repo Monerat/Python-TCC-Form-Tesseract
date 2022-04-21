@@ -6,8 +6,8 @@ import pandas as pd
 import numpy as np
 
 #difinições iniciais das variaveis
-enderecoForm ="Userforms/form5.png"
-enderecoResultado = "Userforms/Correto.txt"
+enderecoForm ="Python-TCC-Form-Tesseract/Userforms/form5.png"
+enderecoResultado = "Python-TCC-Form-Tesseract/Userforms/Correto.txt"
 blurKernel = 7
 divideScale = 255
 threshAny = 0
@@ -37,7 +37,7 @@ plt.annotate(text, xy=(daf.BlurKernel[max], daf.Taxa_de_acerto[max]), xytext=(da
 plt.title('Teste do Blur')
 plt.xlabel('BlurKernel')
 plt.ylabel('Taxa de Acerto')
-plt.savefig('Resultados/Testes/01_Teste_do_Blur.png')
+plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/01_Teste_do_Blur.png')
 
 divideScaleResultados = []
 divideScaleValor = []
@@ -58,7 +58,7 @@ plt.annotate(text, xy=(daf.DivideScale[max], daf.Taxa_de_acerto[max]), xytext=(d
 plt.title('Teste do Divide')
 plt.xlabel('DivideScale')
 plt.ylabel('Taxa de Acerto')
-plt.savefig('Resultados/Testes/02_Teste_do_Divide.png')
+plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/02_Teste_do_Divide.png')
 
 threshAnyResultados = []
 threshAnyValor = []
@@ -79,7 +79,7 @@ plt.annotate(text, xy=(daf.ThreshAny[max], daf.Taxa_de_acerto[max]), xytext=(daf
 plt.title('Teste do ThreshAny')
 plt.xlabel('ThreshAny')
 plt.ylabel('Taxa de Acerto')
-plt.savefig('Resultados/Testes/03_Teste_do_ThreshAny.png')
+plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/03_Teste_do_ThreshAny.png')
 
 threshMaxResultados = []
 threshMaxValor = []
@@ -100,7 +100,7 @@ plt.annotate(text, xy=(daf.ThreshMax[max], daf.Taxa_de_acerto[max]), xytext=(daf
 plt.title('Teste do ThreshMax')
 plt.xlabel('ThreshMax')
 plt.ylabel('Taxa de Acerto')
-plt.savefig('Resultados/Testes/04_Teste_do_ThreshMax.png')
+plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/04_Teste_do_ThreshMax.png')
 
 
 kernelAnchor1Resultados = []
@@ -122,7 +122,7 @@ plt.annotate(text, xy=(daf.kernel_Anchor_1[max], daf.Taxa_de_acerto[max]), xytex
 plt.title('Teste do kernel_Anchor_1')
 plt.xlabel('kernel_Anchor_1')
 plt.ylabel('Taxa de Acerto')
-plt.savefig('Resultados/Testes/05_Teste_do_kernel_Anchor_1.png')
+plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/05_Teste_do_kernel_Anchor_1.png')
 
 
 kernelAnchor2Resultados = []
@@ -144,7 +144,7 @@ plt.annotate(text, xy=(daf.kernel_Anchor_2[max], daf.Taxa_de_acerto[max]), xytex
 plt.title('Teste do kernel_Anchor_2')
 plt.xlabel('kernel_Anchor_2')
 plt.ylabel('Taxa de Acerto')
-plt.savefig('Resultados/Testes/06_Teste_do_kernel_Anchor_2.png')
+plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/06_Teste_do_kernel_Anchor_2.png')
 
 dilateResultados = []
 dilateValor = []
@@ -165,9 +165,9 @@ plt.annotate(text, xy=(daf.Dilate_Iterations[max], daf.Taxa_de_acerto[max]), xyt
 plt.title('Teste do Dilate_Iterations')
 plt.xlabel('Dilate_Iterations')
 plt.ylabel('Taxa de Acerto')
-plt.savefig('Resultados/Testes/07_Teste_do_Dilate_Iterations.png')
+plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/07_Teste_do_Dilate_Iterations.png')
 
-with open("Resultados/Testes/Testes.csv", 'w',encoding='utf-8', newline='') as csvfile:
+with open("Python-TCC-Form-Tesseract/Resultados/Testes/Testes.csv", 'w',encoding='utf-8', newline='') as csvfile:
     wr = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
     w = csv.writer(csvfile)
     
