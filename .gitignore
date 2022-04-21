@@ -1,14 +1,4 @@
 
 *.png
-Resultados/Output.txt
-Resultados/Testes/Form1/Primeiro Teste/Testes feitos mantendo os valores fixos só alterando o testado.txt
-Resultados/Testes/Form1/Primeiro Teste/Testes.csv
-Resultados/Testes/Form1/Segundo Teste/Cada teste foi feito usando o melhor valor do anterior.txt
-Resultados/Testes/Form1/Segundo Teste/Testes.csv
-Resultados/Testes/Form2/Testes.csv
-Resultados/Testes/Form3/Testes.csv
-Resultados/Testes/Form4/Melhor Resultado/Output.txt
-Resultados/Testes/Form4/Testes.csv
-Resultados/Testes/Form5/Melhor Resultado/Output.txt
-Resultados/Testes/Form5/Testes.csv
-Userforms/Correto.txt
+*.txt
+*.csv
