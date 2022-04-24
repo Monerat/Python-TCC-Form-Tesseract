@@ -38,7 +38,7 @@ def testePrecisaoAlgoritmo(nomeForm):
             case 0:
                 blurKernelResultados = []
                 blurKernelvalor = []
-                for i in range(1,5,2): #range(1,101,2)
+                for i in range(1,151,2):
                     blurKernel = i
                     resultado = aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado)
                     blurKernelvalor.append(i)
@@ -56,11 +56,12 @@ def testePrecisaoAlgoritmo(nomeForm):
                 plt.xlabel('BlurKernel')
                 plt.ylabel('Taxa de Acerto')
                 plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/'+nomeForm+'/01_Teste_do_Blur.png')
+                plt.close(fig=1)
                 
             case 1:
                 divideScaleResultados = []
                 divideScaleValor = []
-                for i in range(0,5,1): #(0,255,1)
+                for i in range(0,255,1):
                     divideScale = i
                     resultado = aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado)
                     divideScaleResultados.append(resultado)
@@ -78,11 +79,12 @@ def testePrecisaoAlgoritmo(nomeForm):
                 plt.xlabel('DivideScale')
                 plt.ylabel('Taxa de Acerto')
                 plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/'+nomeForm+'/02_Teste_do_Divide.png')
+                plt.close(fig=2)
                 
             case 2:
                 threshAnyResultados = []
                 threshAnyValor = []
-                for i in range(0,5,1): #range(0,255,1)
+                for i in range(0,255,1):
                     threshAny = i
                     resultado = aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado)
                     threshAnyResultados.append(resultado)
@@ -100,11 +102,12 @@ def testePrecisaoAlgoritmo(nomeForm):
                 plt.xlabel('ThreshAny')
                 plt.ylabel('Taxa de Acerto')
                 plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/'+nomeForm+'/03_Teste_do_ThreshAny.png')
+                plt.close(fig=3)
             
             case 3:
                 threshMaxResultados = []
                 threshMaxValor = []
-                for i in range(0,5,1): #range(0,255,1):
+                for i in range(0,255,1):
                     threshMax = i
                     resultado = aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado)
                     threshMaxResultados.append(resultado)
@@ -122,11 +125,12 @@ def testePrecisaoAlgoritmo(nomeForm):
                 plt.xlabel('ThreshMax')
                 plt.ylabel('Taxa de Acerto')
                 plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/'+nomeForm+'/04_Teste_do_ThreshMax.png')
+                plt.close(fig=4)
 
             case 4:
                 kernelAnchor1Resultados = []
                 kernelAnchor1Valor = []
-                for i in range(1,5,1): #range(1,50,1)
+                for i in range(1,50,1): 
                     kernelAnchor1 = i
                     resultado = aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado)
                     kernelAnchor1Resultados.append(resultado)
@@ -144,11 +148,12 @@ def testePrecisaoAlgoritmo(nomeForm):
                 plt.xlabel('kernel_Anchor_1')
                 plt.ylabel('Taxa de Acerto')
                 plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/'+nomeForm+'/05_Teste_do_kernel_Anchor_1.png')
+                plt.close(fig=5)
 
             case 5:
                 kernelAnchor2Resultados = []
                 kernelAnchor2Valor = []
-                for i in range(1,5,1): #range(1,50,1)
+                for i in range(1,50,1):
                     kernelAnchor2 = i
                     resultado = aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado)
                     kernelAnchor2Resultados.append(resultado)
@@ -166,11 +171,12 @@ def testePrecisaoAlgoritmo(nomeForm):
                 plt.xlabel('kernel_Anchor_2')
                 plt.ylabel('Taxa de Acerto')
                 plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/'+nomeForm+'/06_Teste_do_kernel_Anchor_2.png')
+                plt.close(fig=6)
 
             case 6:
                 dilateResultados = []
                 dilateValor = []
-                for i in range(0,5,1): #range(0,50,1)
+                for i in range(0,50,1):
                     dilateIterations = i
                     resultado = aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado)
                     dilateResultados.append(resultado)
@@ -188,6 +194,7 @@ def testePrecisaoAlgoritmo(nomeForm):
                 plt.xlabel('Dilate_Iterations')
                 plt.ylabel('Taxa de Acerto')
                 plt.savefig('Python-TCC-Form-Tesseract/Resultados/Testes/'+nomeForm+'/07_Teste_do_Dilate_Iterations.png')
+                plt.close(fig=7)
 
             case _:
                 print("valor ainda nao implementado")
