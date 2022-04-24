@@ -203,6 +203,9 @@ def testePrecisaoAlgoritmo(nomeForm):
         wr = csv.writer(csvfile, quoting=csv.QUOTE_ALL)
         w = csv.writer(csvfile)
         
+        w.writerow(["OrdemTestes"])
+        wr.writerow(ordemTest)
+
         w.writerow(["blurKernel",blurKernel])
         w.writerow(["divideScale",divideScale])
         w.writerow(["threshAny",threshAny])
