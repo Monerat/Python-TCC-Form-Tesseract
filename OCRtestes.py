@@ -25,7 +25,7 @@ def aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnc
     #aplicando um blur
     blur = cv2.GaussianBlur(gray,(blurKernel,blurKernel),0)
 
-    #divide 
+    #divide(Aplica uma divisão para refinar o blur gaussiano) 
     divide = cv2.divide(gray, blur, scale=divideScale)
 
     #aplicando um threshold 
@@ -49,7 +49,7 @@ def aplicarOCR(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnc
 
     TextOCR = pytesseract.image_to_string(mask, lang="por")
     TextOCR.strip()
-    with open("Python-TCC-Form-Tesseract/Resultados/Output.txt", "w",encoding='utf-8') as txt_file:
+    with open("Resultados/Output.txt", "w",encoding='utf-8') as txt_file:
         txt_file.write(TextOCR)
     with open(enderecoResultado, "r",encoding='utf-8') as leitor:
         TextReferencia = leitor.read()
