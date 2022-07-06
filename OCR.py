@@ -7,11 +7,11 @@ from transform import cropTransformIMG
 
 pytesseract.pytesseract.tesseract_cmd="C:\Program Files\Tesseract-OCR\Tesseract.exe"
 
-folder = r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Resultados\Novo"
+folder = r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Resultados\logo"
 
 #Carrega a img em memoria
-img = cv2.imread(r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Userforms\Formularios\form9.png")
-
+#img = cv2.imread(r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Resultados\fotos para o word\UERJ-LOGO-400.png")
+img = cv2.imread(r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Resultados\fotos para o word\UERJ-LOGO-400.png")
 original = img.copy()
 
 #Recorta a imagem
@@ -24,7 +24,11 @@ cv2.imwrite(folder+"02_Imagem_Depois_Crop.png",img)
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 cv2.imwrite(folder+"03_Imagem_escala_Cinza.png",gray)
 mask = np.ones(gray.shape, dtype=np.uint8) * 255
-
+plt.hist(gray.ravel(),256,[0,256])
+plt.title('Histograma de uma imagem em tons de cinza')
+plt.xlabel('Valor do Cinza')
+plt.ylabel('Contagem de pixels')
+plt.savefig(folder+"12_histogram_blur.png")
 #aplicando um blur
 blur = cv2.GaussianBlur(gray,(7,7),0)
 cv2.imwrite(folder+"04_Imagem_blur.png",blur)
