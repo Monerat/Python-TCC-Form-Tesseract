@@ -11,7 +11,7 @@ folder = r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Re
 
 #Carrega a img em memoria
 #img = cv2.imread(r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Resultados\fotos para o word\UERJ-LOGO-400.png")
-img = cv2.imread(r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Resultados\fotos para o word\UERJ-LOGO-400.png")
+img = cv2.imread(r"C:\Users\gmone\Desktop\IdentificacaoCode\Python-TCC-Form-Tesseract\Userforms\Formularios\form5.png")
 original = img.copy()
 
 #Recorta a imagem

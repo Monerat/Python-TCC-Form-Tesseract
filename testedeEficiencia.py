@@ -10,7 +10,7 @@ import pandas as pd
 pytesseract.pytesseract.tesseract_cmd="C:\Program Files\Tesseract-OCR\Tesseract.exe"
 
 def aplicarOCRcomIMG(enderecoForm,blurKernel,divideScale,threshAny,threshMax,kernelAnchor1,kernelAnchor2,dilateIterations,enderecoResultado):
-    folder = "Resultados/Testes/ResultadoFinal/MelhorVar/"+enderecoForm+"/"
+    folder = "Resultados/Testes/ResultadoFinal/MelhorVar/TesteConceito"+enderecoForm+"/"
     pathlib.Path(folder).mkdir(parents=True, exist_ok=True)
 
     #Carrega a img em memoria
@@ -71,15 +71,16 @@ def aplicarOCRcomIMG(enderecoForm,blurKernel,divideScale,threshAny,threshMax,ker
 
     with open(enderecoResultado, "r",encoding='utf-8') as leitor:
         TextReferencia = leitor.read()
-
+    with open(folder+"Output.txt", "w",encoding='utf-8') as txt_file:
+        txt_file.write(TextOCR)
     test = dl.SequenceMatcher(None,TextReferencia, TextOCR)
     testSemTratamento = dl.SequenceMatcher(None,TextReferencia, OriginTextOCR)
     testGray = dl.SequenceMatcher(None,TextReferencia, GrayTextOCR)
 
     return test.ratio()*100,testSemTratamento.ratio()*100,testGray.ratio()*100
 
-formulariosParaTestes = ["form1","form2","form3","form4","form5","form6","form7","form8","form9","form10"]
-pathlib.Path("Resultados/Testes/ResultadoFinal/MelhorVar").mkdir(parents=True, exist_ok=True)
+formulariosParaTestes = ["Formulario_FICI","Formulario_medico"]
+pathlib.Path("Resultados/Testes/ResultadoFinal/MelhorVar/TesteConceito").mkdir(parents=True, exist_ok=True)
 enderecoForm=[]
 enderecoResultado=[]
 for form in formulariosParaTestes:
